@@ -46,7 +46,7 @@ jobs:
           for f in *.md; do
             [ "$f" = "README.md" ] && continue
             base="${f%.md}"
-            marp "$f" --pdf  --allow-local-files -o "output/${base}.pdf"
+            marp "$f" --pdf --allow-local-files -o "output/${base}.pdf"
             marp "$f" --pptx --allow-local-files -o "output/${base}.pptx"
           done
 
