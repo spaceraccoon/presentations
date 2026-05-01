@@ -17,7 +17,29 @@ module.exports = async (opts) => {
   global.window = svgWindow
   global.document = svgWindow.document
 
-  mermaid.initialize({ startOnLoad: false, htmlLabels: false, securityLevel: 'strict' })
+  mermaid.initialize({
+    startOnLoad: false,
+    htmlLabels: false,
+    securityLevel: 'strict',
+    theme: 'default',
+    flowchart: { wrappingWidth: 150 },
+    themeVariables: {
+      background: '#ffffff',
+      mainBkg: '#eff6ff',
+      nodeBorder: '#93c5fd',
+      clusterBkg: '#dbeafe',
+      titleColor: '#1e3a8a',
+      edgeLabelBackground: '#ffffff',
+      lineColor: '#2563eb',
+      primaryTextColor: '#18181b',
+      secondaryTextColor: '#3f3f46',
+      tertiaryTextColor: '#18181b',
+      primaryColor: '#eff6ff',
+      primaryBorderColor: '#93c5fd',
+      secondaryColor: '#dbeafe',
+      tertiaryColor: '#e0e7ff',
+    },
+  })
 
   const cache = new Map()
 

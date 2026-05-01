@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "for f in [0-9][0-9][0-9][0-9]/*/slides.md; do npx marp --engine ./engine.js --allow-local-files --pdf \"$f\"; done"
+    "build": "node build.js",
+    "build:all": "node build.js --all"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "4.3.1",
